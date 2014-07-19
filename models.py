@@ -35,7 +35,7 @@ class Mahasiswa(BaseModel):
 
     class Meta:
         indexes = (
-            (('niu'), True)
+            (('niu',), True),
         )
 
 

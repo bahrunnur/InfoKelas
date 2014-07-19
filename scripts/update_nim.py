@@ -5,9 +5,8 @@ from robobrowser import RoboBrowser
 
 BASE_URL = "http://kpo48.webege.com/koplak.php?angkatan={0}&prodi={1}"
 ANGKATAN = ["2010", "2011", "2012", "2013"]
-# PRODI = ["Matematika", "Statistika", "Fisika", "Geofisika", "Kimia",
-#          "Elektronika+dan+Instrumentasi", "Ilmu+Komputer"]
-PRODI = ["Kimia", "Elektronika+dan+Instrumentasi", "Ilmu+Komputer"]
+PRODI = ["Matematika", "Statistika", "Fisika", "Geofisika", "Kimia",
+         "Elektronika+dan+Instrumentasi", "Ilmu+Komputer"]
 
 
 def grab(browser, angkatan, prodi):

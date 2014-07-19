@@ -11,15 +11,21 @@ InfoKelas hanya bisa digunakan bagi mahasiswa FMIPA UGM.
 
 Development Setup
 -----------------
-buat Python virtual environment dan aktifkan.
+- Create Python virtual environment and activate it.
 
-    virtualenv --no-site-packages InfoKelas
-    source InfoKelas/bin/activate
+    	virtualenv --no-site-packages InfoKelas
+    	source InfoKelas/bin/activate
 
-Install dependencies.
+- Install dependencies.
 
-    pip install -r requirements.txt
+    	pip install -r requirements.txt
 
-Start the app.
+- Set `IK_IN_DEVELOPMENT` environment variable, or you can add it in your `.bashrc` file.
 
-    python wsgi.py
+    	export IK_IN_DEVELOPMENT=yes
+
+- Create a database that has name `info_kelas_db` or you can create with anything else name and edit the configuration in `config.py`.
+
+- Start the app.
+
+    	python wsgi.py

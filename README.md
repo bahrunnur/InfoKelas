@@ -24,7 +24,9 @@ Development Setup
 
     	export IK_IN_DEVELOPMENT=yes
 
-- Create a database that has name `info_kelas_db` or you can create with anything else name and edit the configuration in `config.py`.
+- Create a database that has name `info_kelas_db` or you can create with anything else name and edit the configuration in `config.py`. And, provision your local database
+        
+        python scripts/db_provision.py
 
 - Start the app.
 

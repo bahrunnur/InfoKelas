@@ -10,6 +10,8 @@ from peewee import *
 
 from config import db as ik_db
 
+__all__ = ["Mahasiswa", "Kelas", "KelasMahasiswa", "db"]
+
 
 if os.getenv('IK_IN_DEVELOPMENT'):
     db_name = ik_db['dev']['name']
@@ -41,21 +43,21 @@ class Mahasiswa(BaseModel):
 
 class Kelas(BaseModel):
     id = PrimaryKeyField()
-    kode = CharField(max_length=7)
-    name = CharField()
+    kode_mk = CharField(max_length=7)
+    nama = CharField()
     matakuliah = CharField()
     dosen = CharField()
     sks = IntegerField()
     tipe = CharField(max_length=1)
 
-    # format: '{hari}:{jam}:{ruang}|{hari}:{jam}..'
+    # format: '{hari}${jam}${ruang}|{hari}${jam}..'
     jadwal_kuliah = TextField()
 
-    # format: '{tanggal}:{jam}:{ruang}'
-    jadwal_uts = TextField()
+    # format: '{tanggal}${jam}${ruang}'
+    jadwal_uts = TextField(null=True)
 
-    # format: '{tanggal}:{jam}:{ruang}'
-    jadwal_uas = TextField()
+    # format: '{tanggal}${jam}${ruang}'
+    jadwal_uas = TextField(null=True)
 
 
 class KelasMahasiswa(BaseModel):

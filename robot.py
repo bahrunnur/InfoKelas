@@ -33,7 +33,7 @@ class Robot(object):
             # obj['jadwal_uas'] = detail['jadwal_uas']
         self._persist_matakuliah()
 
-    def _persist_matakuliah(self,):
+    def _persist_matakuliah(self):
         for obj in self.matakuliah:
             try:
                 kelas = (Kelas.select()
